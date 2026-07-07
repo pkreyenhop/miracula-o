@@ -1,0 +1,16 @@
+# Dune build directory
+_build/
+
+# Compiled files and other artifacts
+*.cmo
+*.cmi
+*.cmx
+*.o
+*.obj
+*.a
+*.lib
+
+# IDE/Editor config
+.vscode/
+.idea/
+.DS_Store
