@@ -56,6 +56,20 @@ fib n = fib (n-1) + fib (n-2)
 x = fib (3+1)
 ```
 
+## Project Structure
+
+The project is organized as a standard [Dune](https://dune.build/) workspace:
+
+- **`bin/`**: Core executable sources.
+  - [bin/miracula.ml](file:///Users/pkreyenhop/src/miracula-o/bin/miracula.ml): The main entry point and runtime implementation of the Miranda REPL and interpreter.
+  - [bin/dune](file:///Users/pkreyenhop/src/miracula-o/bin/dune): Executable build declaration.
+- **`lib/`**: Workspace library sources (under the `miracula_o` module namespace).
+- **`test/`**: Unit test suite.
+  - [test/test_miracula_o.ml](file:///Users/pkreyenhop/src/miracula-o/test/test_miracula_o.ml): Testing implementation.
+  - [test/dune](file:///Users/pkreyenhop/src/miracula-o/test/dune): Test build configuration.
+- **`dune-project`**: Root Dune configuration specifying project parameters and metadata.
+- **`script.m`**: Default local definitions loaded automatically by the interpreter.
+
 ## How to Build and Run
 
 ### Prerequisites
@@ -73,3 +87,9 @@ Launch the REPL by running the executable via Dune:
 dune exec miracula-o
 ```
 If a `script.m` file is present in the working directory, its bindings will be automatically loaded upon startup.
+
+### Run Tests
+To run the automated test suite:
+```bash
+dune runtest
+```
