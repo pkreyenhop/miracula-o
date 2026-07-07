@@ -1,4 +1,5 @@
 (executable
  (public_name miracula-o)
  (name miracula)
- (libraries miracula_o))
+ (libraries miracula_o)
+ (ocamlopt_flags :standard -O3))

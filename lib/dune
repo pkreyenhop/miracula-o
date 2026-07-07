@@ -1,2 +1,3 @@
 (library
- (name miracula_o))
+ (name miracula_o)
+ (ocamlopt_flags :standard -O3))
