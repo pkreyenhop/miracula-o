@@ -14,3 +14,6 @@ _build/
 .vscode/
 .idea/
 .DS_Store
+
+# Compiled executable
+mira
